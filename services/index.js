@@ -4,12 +4,8 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
 export const getPosts = async () => {
   const query = gql`
-    query getPosts {
-      postsConnection(
-        orderBy: publishedAt_DESC
-        first: 3
-        where: {featuredPost: true}
-      ) {
+    query MyQuery {
+      postsConnection(orderBy: publishedAt_DESC) {
         edges {
           cursor
           node {
@@ -32,14 +28,11 @@ export const getPosts = async () => {
               name
               slug
             }
-            featuredPost
           }
         }
       }
     }
-
   `;
-
   const result = await request(graphqlAPI, query);
 
   return result.postsConnection.edges;
@@ -80,7 +73,7 @@ export const getPostDetails = async (slug) => {
         slug
         content {
           raw
-          # html
+
         }
         categories {
           name
@@ -190,27 +183,45 @@ export const getCategoryPost = async (slug) => {
 
 export const getFeaturedPosts = async () => {
   const query = gql`
-    query GetCategoryPost() {
-      posts(where: {featuredPost: true}, orderBy: publishedAt_DESC) {
-        author {
-          name
-          photo {
-            url
+    query GetFeaturedPosts() {
+      postsConnection(
+        orderBy: publishedAt_DESC
+        first: 3
+        where: {featuredPost: true}
+      ) {
+        edges {
+          cursor
+          node {
+            author {
+              bio
+              name
+              id
+              photo {
+                url
+              }
+            }
+            createdAt
+            slug
+            title
+            excerpt
+            featuredImage {
+              url
+            }
+            categories {
+              name
+              slug
+            }
+            featuredPost
           }
         }
-        featuredImage {
-          url
-        }
-        title
-        slug
-        createdAt
       }
-    }   
-  `;
+    }
 
+  `;
   const result = await request(graphqlAPI, query);
 
-  return result.posts;
+  // return result.posts;
+  return result.postsConnection.edges;
 };
 
 export const submitComment = async (obj) => {
@@ -269,6 +280,7 @@ export const getLeaders = async() => {
     authors(orderBy: displayOrder_ASC, where: {leadership: true}) {
       name
       titles
+      email
       displayOrder
       photo {
         url

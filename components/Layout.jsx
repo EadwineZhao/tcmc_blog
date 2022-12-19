@@ -1,9 +1,11 @@
-import React from 'react'
-import { Header } from '.';
+import React, { useEffect } from 'react'
+import { Header, Hero } from '.';
 import { useState } from 'react';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   const [toggleMenu, setToggleMenu] = useState(false)
+
 
   return (
     <>
@@ -11,9 +13,12 @@ const Layout = ({ children }) => {
           toggleMenu={toggleMenu}
           setToggleMenu={setToggleMenu}
         />
-        {!toggleMenu && children  }
+        {!toggleMenu && 
+        children  }
+        {!toggleMenu && <Footer />}
     </>
   )
 };
 
 export default Layout
+

@@ -8,12 +8,8 @@ const PostCard = ( {post, index} ) => {
   
   
   return (
-    <div>
       <div className=" bg-[#042c54] shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
         <div className="relative h-20 overflow-hidden shadow-md pb-80 mb-6">
-
-
-          
             <Image 
               src={post.featuredImage.url}
               alt={post.title}
@@ -56,7 +52,7 @@ const PostCard = ( {post, index} ) => {
             </span>
           </div>
         </div>
-        <p className='text-center  text-white font-normal px-4 lg:px-20 mb-8'>{post.excerpt}</p>
+        <p className='text-center h-28   text-white font-normal text-base  px-4 lg:px-6 mb-8'>{post.excerpt}</p>
         <div className='text-center'>
             <Link href={`/post/${post.slug}`}>
                 <span className='transition duration-500  hover:-translate-y-1 inline-block  bg-white text-lg font-medium rounded-full text-back px-8 py-3 cursor-pointer'>
@@ -66,7 +62,6 @@ const PostCard = ( {post, index} ) => {
         </div>
       </div>
       
-    </div>
   )
 }
 

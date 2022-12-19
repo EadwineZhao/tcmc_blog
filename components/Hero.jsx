@@ -9,13 +9,13 @@ const Hero = ({ featuredPosts }) => {
     // console.log(featuredPosts)
   return (
             
-
+    
             <Carousel
                 additionalTransfrom={0}
                 arrows
                 autoPlaySpeed={3000}
                 centerMode={false}
-                className="   relative  bg-cover bg-no-repeat h-full w-full  "
+                className="   relative  bg-cover bg-no-repeat h-full w-full mb-10"
                 containerClass="  "
                 dotListClass=""
                 draggable
@@ -62,18 +62,20 @@ const Hero = ({ featuredPosts }) => {
                 >
 
 
-                {featuredPosts.map(({node: post}) => {
+                {featuredPosts.map(({node: post}, index) => {
+                    console.log(index, post.featuredImage.url)
                     return (
-                        <div key={post.slug} className='relative   w-full  h-full '>
-                            <Link href={`/post/${post.slug}`} key={post.title}>
+                        <div key={post.slug} className='  relative  w-full  h-96 lg:h-[600px] '>
+                            <Link  href={`/post/${post.slug}`} key={post.title}>
                                 <Image 
                                     key={post.title}
                                     alt={post.title}
                                     src={post.featuredImage.url}
-                                    className=" relative opacity-80  z-10 block h-full w-full  "
+                                    className=" object-cover opacity-70  block h-full w-full  "
                                     // height={600}
                                     // width={600}
                                     fill={true}
+                                    priority={index == 0 ? true : false}
                                     sizes="
                                         (max-width: 768px) 100vw,
                                         (max-width: 1200px) 50vw,
@@ -82,8 +84,14 @@ const Hero = ({ featuredPosts }) => {
                                     
                                     
                                 />
+                                <div className=' absolute top-2/4 w-full  bg-white h-28 opacity-30   '>
+
+                                     <h2 className=" absolute text-2xl font-extrabold top-2/4 left-1/3  text-color-footer ">{post.title}</h2>
+
+                                        {/* <h2 className=" absolute text-2xl font-extrabold top-2/4 left-1/3  gradient__text ">{post.title}</h2> */}
+                                </div>
                             </Link>
-                            {/* <h2 className=" absolute text-lg top-8  z-20  text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">主日崇拜程序单18/12/22</h2> */}
+
                         </div>
                     )
                 })}
@@ -91,7 +99,7 @@ const Hero = ({ featuredPosts }) => {
 
 
                 
-                <img
+                {/* <img
                      src="https://images.unsplash.com/photo-1599964815811-30b9aea11d17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
                     style={{
                     display: 'block',
@@ -99,7 +107,7 @@ const Hero = ({ featuredPosts }) => {
                     margin: 'auto',
                     width: '100%'
                     }}
-                />
+                /> */}
 
             </Carousel>
   

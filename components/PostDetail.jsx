@@ -6,6 +6,7 @@ import { RichText } from '@graphcms/rich-text-react-renderer';
 
 const PostDetail = ( { post }) => {
   const content = post.content.raw;
+
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
 
@@ -22,6 +23,7 @@ const PostDetail = ( { post }) => {
         modifiedText = (<u key={index}>{text}</u>);
       }
     }
+    
 
     switch (type) {
       case 'heading-three':
@@ -65,30 +67,30 @@ const PostDetail = ( { post }) => {
             priority={true}
         />
       </div>
-      <div className='px-4 lg:px-0'>
+      <div className='px-2 lg:px-0'>
         <div className='flex items-center mb-8 w-full'>
-          <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 ">
+          {/* <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 ">
 
-              {/* <Image 
+              <Image 
                 alt={post.author.name}
                 height={30}
                 width={30}
                 className='aligh-middle rounded-full h-auto w-auto'
                 src={post.author.photo.url}
                 quality={50}
-              /> */}
+              />
               <p className="inline align-middle text-white text-gray-700 ml-2 text-lg">{post.author.name}</p>
-          </div>
+          </div> */}
           <div className="font-medium text-white">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <span className='align-middle text-white'>
+              <span className='align-middle text-base text-white'>
                 {moment(post.createdAt).format('MMM DD, YYYY')}
               </span>
           </div>
         </div>
-        <h1 className="mb8  text-lg text-white font-semibold mb-5">
+        <h1 className="mb8 text-base text-white font-semibold mb-5">
           {post.title}
         </h1>
         {/* {post.content.raw.children.map((typeObj, index) => {
@@ -100,11 +102,16 @@ const PostDetail = ( { post }) => {
         <RichText 
           content={content} 
           renderers={{
-          h1: ({ children }) => <h1 className="text-white">{children}</h1>,
-          p: ({ children }) => <p className="text-white">{children}</p>,
-          bold: ({ children }) => <strong className="text-white">{children}</strong>,
+          h1: ({ children }) => <h1 className="text-white ">{children}</h1>,
+          p: ({ children }) => <p className=" text-color-text">{children}</p>,
+          bold: ({ children }) => <strong className="text-white text-base">{children}</strong>,
+          table: ({ children }) => <table className=' w-full'>{children}</table>,
+          // table_row: ({ children }) => <tr className=' border-t-bubble-gum'>{children}</tr>,
+          // table_head: ({ children }) => <th className=' border-b-2' >{children}</th>,
+          table_cell: ({ children }) => <td className=' border-b-2 px-1 py-2 border-b-brightRedLight   '>{children}</td>
         }}
         />
+
 
       </div>
     </div>
