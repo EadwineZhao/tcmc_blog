@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className=''>
       {/* <!-- Flex Container --> */}
       <div
-        className="container flex border-y border-color-border flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
+        className="container flex border-y border-color-border flex-col-reverse justify-between px-3 py-10  space-y-8 md:flex-row md:space-y-0"
       >
         {/* <!-- Logo and social links container --> */}
         <div
@@ -34,7 +34,7 @@ const Footer = () => {
 
         </div>
         {/* <!-- List Container --> */}
-        <div className="flex justify-around   space-x-20  hover:text-brightRed lg:space-x-36">
+        <div className="flex justify-around space-x-28 hover:text-brightRed lg:space-x-36">
           <div className="flex flex-col space-y-3 text-white ">
             <Link href="/" className="hover:text-brightRed">首页</Link>
             <Link href="/category/sunday-worship" className="hover:text-brightRed">主日程序单</Link>
@@ -50,16 +50,16 @@ const Footer = () => {
         </div>
 
         {/* <!-- Input Container --> */}
-        <div className="flex flex-col px-6 justify-between">
+        <div className="flex flex-col px-4 justify-between">
           <form>
             <div className="flex space-x-3">
               <input
                 type="text"
-                className="flex-1 px-4 rounded-full focus:outline-none"
+                className="flex-1 w-[80%] indent-3 rounded-full focus:outline-none"
                 placeholder="输入电子邮件以订阅期刊"
               />
               <button
-                className="px-6 py-2 text-color-footer rounded-full bg-color-btn hover:bg-brightRedLight focus:outline-none"
+                className=" px-6 py-2 text-color-footer rounded-full bg-color-btn hover:bg-brightRedLight focus:outline-none"
               >
                 订阅
               </button>

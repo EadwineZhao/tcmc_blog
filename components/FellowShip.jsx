@@ -10,7 +10,7 @@ const FellowShip = () => {
         </div>
         <div className=" my-auto  col-span-full h-2  bg-gradient-bar w-full lg:col-span-1 lg:w-2 lg:h-auto" />
         <div className="relative col-span-full py-6 lg:col-span-8">
-            <p className="text-color-text">
+            <p className=" text-white">
             团结、友爱与分享，信徒之间互相平等、团结友爱，在圣灵指导下过信徒见证的生活，分享基督之爱。 团契通常以组织、年龄、地域、语言、职业、圣经人物等带有群体性质的方式命名，团契聚会的主要内容有破冰祷告、诗歌敬拜、查经、分享、聚餐、传福音等。
             </p>
         </div>

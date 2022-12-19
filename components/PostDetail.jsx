@@ -108,7 +108,7 @@ const PostDetail = ( { post }) => {
           table: ({ children }) => <table className=' w-full'>{children}</table>,
           // table_row: ({ children }) => <tr className=' border-t-bubble-gum'>{children}</tr>,
           // table_head: ({ children }) => <th className=' border-b-2' >{children}</th>,
-          table_cell: ({ children }) => <td className=' border-b-2 px-1 py-2 border-b-brightRedLight   '>{children}</td>
+          table_cell: ({ children }) => <td className=' border px-1 py-2 border-b-brightRedLight   '>{children}</td>
         }}
         />
 
