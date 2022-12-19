@@ -36,14 +36,15 @@ const Footer = () => {
         {/* <!-- List Container --> */}
         <div className="flex justify-around   space-x-20  hover:text-brightRed lg:space-x-36">
           <div className="flex flex-col space-y-3 text-white ">
-            <a href="/" className="hover:text-brightRed">首页</a>
-            <a href="/category/sunday-worship" className="hover:text-brightRed">主日程序单</a>
-            <a href="/blog" className="hover:text-brightRed">教会活动</a>
+            <Link href="/" className="hover:text-brightRed">首页</Link>
+            <Link href="/category/sunday-worship" className="hover:text-brightRed">主日程序单</Link>
+            <Link href="/blog" className="hover:text-brightRed">教会活动</Link>
+
           </div>
           <div className="flex flex-col space-y-3 text-white">
-            <a href="/mission" className="hover:text-brightRed">使命目标</a>
-            <a href="/offerings" className="hover:text-brightRed">奉献</a>
-            <a href="/contactus" className="hover:text-brightRed">联系我们</a>
+            <Link  href="/mission" className="hover:text-brightRed">使命目标</Link>
+            <Link href="/offerings" className="hover:text-brightRed">奉献</Link>
+            <Link href="/contactus" className="hover:text-brightRed">联系我们</Link>
 
           </div>
         </div>
