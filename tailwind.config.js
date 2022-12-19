@@ -46,6 +46,7 @@ module.exports = {
       'veryPaleRed': 'hsl(13, 100%, 96%)',
       'veryLightGray': 'hsl(0, 0%, 98%)',
       'test':'rgba(248, 247, 216, 0.7)',
+      'color-pink':'rgb(236 72 153)',
 
     },
   },
