@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getCategories } from "../services";
 import Image from 'next/image';
 import logo from '../public/logo.png'
+import { group, church, children, family } from '../public/icon';
 
 
 
@@ -21,7 +22,7 @@ const Header = (props) => {
     const metaMenu = document.querySelector('#activities')
     const arrow = document.querySelector('#activities-arrow')
     arrow.style.transform = 'rotate(180deg)';
-    metaMenu.style.display = 'flex';
+    metaMenu.style.display = 'block';
   }
 
    const closeChurchActivities = () => {
@@ -69,10 +70,10 @@ const Header = (props) => {
                         </div>
                         <div 
                             className=' group text-base font-semibold leading-6' 
-                            // onMouseEnter={showChurchActivities}
-                            // onMouseLeave={handleClickMenu}
+                            onMouseEnter={showChurchActivities}
+                            onMouseLeave={handleClickMenu}
                         >
-                            <Link className=' relative py-3 px-4 hover:text-color-hover  flex justify-between items-center' href='#' scroll={false}>
+                            <Link className=' relative py-3  px-4 hover:text-color-hover  flex justify-between items-center' href='#' scroll={false}>
                                 教会信息
                                 <Image 
                                     src='/arrow-down.svg'
@@ -85,15 +86,66 @@ const Header = (props) => {
                             </Link>
                             {/* <div className=' relative bg-color-hover h-[2px]' /> */}
                             {/* panel outer define position */}
-                            <div className='relative  z-50 hidden group-hover:block group-focus:hidden '>
+                            <div className='relative hidden' id='activities'>
                                 {/* panel inner define position */}
-                                <div className='absolute left-1/2 top-0 -translate-x-1/2 ' id='activities'>
+                                <div className='absolute left-1/2 top-0 -translate-x-1/2 ' >
                                     {/* panel spacer  */}
                                     <div className=' pt-6'>
                                         <div className=' bg-white w-[407px] shadow-lg rounded-3xl py-[2rem]'>
-                                            <Link className='flex pr-[1rem] pl-[2rem] mb-[1rem]' href="/groups" onClick={handleClickMenu} >小组介绍</Link>
-                                            <Link className='flex pr-[1rem] pl-[2rem] mb-[1rem]' href="/blog" onClick={handleClickMenu} >教会活动</Link>
-                                            <Link className='flex pr-[1rem] pl-[2rem] mb-[1rem]' href="/fellowship" onClick={handleClickMenu}>团契</Link>
+                                            <Link className='flex items-center gap-3 pr-[1rem] pl-[2rem] mb-[1rem]' href="/groups" onClick={handleClickMenu} >
+                                                <div className='flex items-center bg-color-bg-icon w-10 h-10 rounded-md'>
+                                                    <Image 
+                                                        alt='group-icon'
+                                                        src={group}
+                                                        height={22}
+                                                        width={22}
+                                                    />
+                                                </div>
+                                                <div className=' hover:text-color-hover'>
+                                                    <div className=' font-semibold mb-1'>
+                                                        小组介绍
+                                                    </div>
+                                                    <div className=' font-normal text-sm'>
+                                                        各个小组组长信息，活动时间和目标
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                            <Link className='flex items-center gap-3 pr-[1rem] pl-[2rem] mb-[1rem]' href="/blog" onClick={handleClickMenu} >
+                                                <div className='flex items-center bg-color-bg-icon w-10 h-10 rounded-md'>
+                                                    <Image 
+                                                        alt='church-icon'
+                                                        src={church}
+                                                        height={22}
+                                                        width={22}
+                                                    />
+                                                </div>
+                                                <div className=' hover:text-color-hover'>
+                                                    <div className=' font-semibold mb-1'>
+                                                        教会活动
+                                                    </div>
+                                                    <div className=' font-normal text-sm'>
+                                                        教会日志，以往活动信息，记录精彩时刻
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                            <Link className='flex items-center gap-3 pr-[1rem] pl-[2rem] mb-[1rem]' href="/fellowship" onClick={handleClickMenu} >
+                                                <div className='flex items-center bg-color-bg-icon w-10 h-10 rounded-md'>
+                                                    <Image 
+                                                        alt='family-icon'
+                                                        src={family}
+                                                        height={22}
+                                                        width={22}
+                                                    />
+                                                </div>
+                                                <div className=' hover:text-color-hover'>
+                                                    <div className=' font-semibold mb-1'>
+                                                        儿童团契
+                                                    </div>
+                                                    <div className=' font-normal text-sm'>
+                                                        儿童团契，他们是上帝送给我们珍贵的礼物
+                                                    </div>
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

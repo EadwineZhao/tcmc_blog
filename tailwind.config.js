@@ -28,6 +28,7 @@ module.exports = {
       'color-text-btn':'rgb(74, 85, 104)',
       'color-border': 'rgb(226, 232, 240)',
       'color-bg-benefitsofjoing': '#F5F2F0',
+      'color-bg-icon':'rgb(247, 250, 252)',
       'white': '#ffffff',
       'purple': '#3f3cbb',
       'midnight': '#121063',
