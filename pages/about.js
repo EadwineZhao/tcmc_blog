@@ -15,26 +15,55 @@ const About = () => {
     return (
         
         <div className=" container mb-8  rounded-lg    px-5 mx-auto mt-10 text-center text-color-text">
-            <div className='container  mx-auto px-6'>
+            <div className='container   mx-auto px-6'>
 
-                <p className=' py-6'>
-                    欢迎来到佳恩堂！ 无论您是刚到这座城市，还是这座城市的居民，我们都很高兴您找到了我们。我们寻求通过我们的周日服务、每周的祈祷室时间、每周的社区团体。建立我们之间的纽带。
-                </p>
-                <p className=' py-6'>
+                <h3 className=' text-xl font-bold py-2'>
+                使徒信经
+                </h3>
+                <p className=' py-2'>
 
-                    我们鼓励您在下面更多地了解我们的愿景和信念，并邀请您通过我们的众多服务、祷告会和事工机会与我们建立联系。
+                我信上帝 全能的父 创造天地的主
                 </p>
-                <p className=' py-6'>
+                <p className=' py-2'>
 
-                    我们的祷告是，当您探索信仰和我们的社区时，您将亲身体验耶稣基督的爱！ 我们祷告你会知道福音的好消息并被改变，通过圣灵自由的工作获得新的身份，参与信徒的社区，信仰三位一体真神是我们的使命，并学习 活出圣灵的能力。
+                我信我主耶稣基督 上帝的独生子
                 </p>
-                <p className=' py-6'>
+                <p className=' py-2'>
+                因着圣灵感孕 由童贞女马利亚所生
+                </p>
+                <p className=' py-2'>
+                在本丢彼拉多手下受难 被钉在十字架上
+                </p>
+                <p className=' py-2'>
+                受死 埋葬 降在阴间 第三天从死人中复活
+                </p>
+                <p className=' py-2'>
+                升天 坐在全能父上帝的右边
+                </p>
+                <p className=' py-2'>
+                将来必从那里降临 审判活人 死人
+                </p>
+                <p className=' py-2'>
+                我信圣灵
+                </p>
+                <p className=' py-2'>
+                我信圣而公之教会 我信圣徒相通
+                </p>
+                <p className=' py-2'>
+                我信罪得赦免
+                </p>
+                <p className=' py-2'>
+                我信身体复活
+                </p>
+           
+                我信永生 阿们！
 
-                愿上帝在我们的城市和我们这一代人中做的事比我们梦想的还要多！
-                </p>
             </div>
+            <h2 className="text-xl font-bold text-center pt-8 ">
+                2022/2024
+            </h2>
             <h2 className="text-xl font-bold text-center pt-8 pb-20">
-                2022/2024佳恩堂执事会
+                佳恩堂牧者与执事会
             </h2>
                 {/* // <!-- Testimonials Container --> */}
                 <div className="container mx-auto px-8 mb-8 grid grid-cols-1 lg:grid-cols-12 gap-10 ">

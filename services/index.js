@@ -293,6 +293,27 @@ export const getLeaders = async() => {
   return result.authors;
 }
 
+export const getGroups = async() => {
+  const query = gql`
+  query GetGroups {
+    groups {
+      id
+      name
+      destination
+      featuredImage {
+        url
+      }
+      startAt
+      authors {
+      name
+    }
+    }
+  }
+  `
+  const result = await request(graphqlAPI, query);
+
+  return result.groups;
+}
 
 // export const getCategories = async () => {
 //   const query = gql`

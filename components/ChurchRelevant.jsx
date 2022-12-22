@@ -6,7 +6,7 @@ const ChurchRelevant = () => {
     <div className=' container mx-auto my-16 px-5 grid grid-cols-1 justify-center gap-6  lg:grid-cols-12'>
         <div className="col-span-1 text-center text-color-text font-bold lg:col-span-12">
             <h3 className=" text-xl">
-            活在礼仪中
+            做门徒，关怀，宣教
             </h3>
         </div>
         <div className='col-span-1 bg-brightRedSupLight rounded-sm p-7 border-b-8 border-b-color-text lg:col-span-4'>
@@ -19,7 +19,10 @@ const ChurchRelevant = () => {
             </div>
             <h4 className=' text-lg font-semibold text-color-text-header mb-4'>关于我们</h4>
             <p className=' text-color-text-primary'>
-            我们寻求通过我们的周日服务、每周的祈祷室时间、每周的社区团体。建立我们之间的纽带。
+            佳恩堂是一间靠著圣灵的大能而建立的属灵大家庭:
+1.小组的教会: 人人在小组生活中，被关心、牧养，成为相爱相顾的“家人”
+2.门训的教会: 人人在培育系统中，被装备、训练，成为跟随耶稣的“门徒”
+3.宣教的教会: 人人在宣教异象中，被呼召、差派，成为福音使命的“使者”
             </p>
             {/* <div className=' h-1 bg-gradient-bar 	' /> */}
         </div>
@@ -31,9 +34,9 @@ const ChurchRelevant = () => {
                     src={involved}
                 />
             </div>
-            <h4 className=' text-lg font-semibold text-color-text-header mb-4'>建立联系</h4>
+            <h4 className=' text-lg font-semibold text-color-text-header mb-4'>三一信仰</h4>
             <p className=' text-color-text-primary'>
-            我们的祷告是，当您探索信仰和我们的社区时，您将亲身体验耶稣基督的爱！ 我们祷告你会知道福音的好消息并被改变，通过圣灵自由的工作获得新的身份，参与信徒的社区，信仰三位一体真神是我们的使命，并学习 活出圣灵的能力。
+            宇宙只有一位永生的真神上帝，无始无终，无形无像。祂的权能、智慧及良善，皆无穷尽。世上有形无形之万物，都是祂创造的、保存的。这位独一的真神上帝，是三位一体的；即圣父、圣子、圣灵。也是同本质、同权柄、同永生的。
             </p>
             {/* <div className=' h-1 bg-gradient-bar 	' /> */}
         </div>
@@ -45,11 +48,10 @@ const ChurchRelevant = () => {
                     src={givingback}
                 />
             </div>
-            <h4 className=' text-lg font-semibold text-color-text-header mb-4'>回馈社会</h4>
+            <h4 className=' text-lg font-semibold text-color-text-header mb-4'>神的教会</h4>
             <p className=' text-color-text-primary'>
-            万军之耶和华说：你们要将当纳的十分之一，全然送入仓库，使我家有粮，以此试试我，是否为你们敞开天上的窗户，倾福与你们，甚至无处可容
-
-
+            这家是永生神的教会，真理的柱石和根基。
+（提摩太前书3：15）
             </p>
             {/* <div className=' h-1 bg-gradient-bar 	' /> */}
         </div>

@@ -5,9 +5,12 @@ const Offerings = () => {
     <div className='container mx-auto flex flex-col justify-center items-center'>
 
       <div className=' w-full h-full flex flex-col justify-center items-center  bg-gradient-radial mx-auto px-8 mb-10 py-6 text-xl text-color-text '>
-        <h2 className=' font-bold text-xl py-6 text-center text-brightRed mb-5 '>
-          陶朗加基督教华人卫理公会佳恩堂信徒奉献表
-        </h2>
+        <h5 className=' font-bold text-xl py-6 text-center text-brightRed '>
+          陶朗加基督教华人卫理公会佳恩堂
+        </h5>
+        <h5 className=' font-bold text-xl py-6 text-center text-brightRed mb-5 '>
+          信徒奉献表
+        </h5>
         <p className=' font-bold text-lg text-color-text mb-5'>
           万军之耶和华说：你们要将当纳的十分之一，全然送入仓库，使我家有粮，以此试试我，是否为你们敞开天上的窗户，倾福与你们，甚至无处可容
         </p>
@@ -21,12 +24,23 @@ const Offerings = () => {
       <p className=' text-color-text mb-10'>
         圣父，我所拥有的，没有一样不是你赐给我的。 我所有的一切都属于你，是用耶稣的宝血买来的。 倾尽所有于己，施而不舍，世人之道，汝不可也。
 
-但慷慨是那些称基督为主的人的方式； 以自由的心爱祂，以更新的心意事奉祂。 谁能抵挡住窒息的财富迷惑； 他们的心在你的王国而不是世界的体系中。
-
-我决心增加布施，直到可以说我们中间没有一个有需要的人。 我决心在金钱这样的小事上值得信赖，以便您可以将真正的财富托付给我。
-
-最重要的是，我决心慷慨大方，因为天父，您很慷慨。 您的儿女乐于分享您的品质，并向全世界展示您的品格。
+但慷慨是那些称基督为主的人的方式； 以自由的心爱祂，以更新的心意事奉祂。
         </p>
+        <div>
+
+        奉献种类
+1.什一奉献
+基督徒按照圣经的教导，将每月所得十分之一奉献予教会。
+2.主日奉献
+每主日的例常奉献，作为经常性事工之所需。
+3.感恩奉献
+感谢主在您身上、家庭、事业、生活中特别的祝福，向神献上感恩，依感动奉献予教
+会。
+4.宣教奉献
+为宣教和布道事工（陶波小组，皇后镇事工，福音机构，神学院…等）之奉献。
+5.建堂奉献
+为本家建堂相关事工（建筑物、装潢、设备…等）之奉献。
+        </div>
         <div className=''>
 
           <div className='  h-1 w-8 col-span-2  bg-gradient-bar mb-3'/>

@@ -4,17 +4,14 @@ const LoveAndCompassion = () => {
   return (
     <div className=' grid grid-cols-1 mx-auto text-center px-8  gap-10 my-10  justify-center  lg:grid-cols-12 lg:px-24'>
         <div className=' col-span-1  lg:col-span-full '>
-            <h3 className=' text-color-text font-bold  py-8 text-xl'>爱与同情</h3>
+            <h3 className=' text-color-text font-bold  py-8 text-xl'>以弗所书 </h3>
             <p className=' text-color-text'>
-                同情心是一幅展示神大爱的图画，祂对我们所有人的恩典和同情心。神曾多次在圣经中给我们展示。其中最具能力的一次是耶稣和人们一起为拉撒路的死哀哭。 
-            </p>
+            神能照着运行在我们心里的大力，充充足足地成就一切，超过我们所求所想的。但愿他在教会中，并在基督耶稣里，得着荣耀，直到世世代代，永永远远。阿们。</p>
             <p className=' text-color-text p-7'>
 
-                （《约翰福音》第11章17-44节》）
+            （以弗所书 3:20-21）
             </p>
-            <p className=' text-color-text p-7'>
-            耶稣看见他哭，并看见与他同来的犹太人也哭，就心里悲叹，又什忧愁，耶稣哭了。 《约翰福音》第11章33,35节
-            </p>
+  
         </div>
         <div className=' col-span-1 flex justify-center  lg:col-span-full '>
             <div className=' h-8 w-44 shadow-lg rounded-sm p-5 text-color-text-btn  flex items-center justify-center bg-color-btn'>阅读更多</div>

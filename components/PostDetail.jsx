@@ -7,46 +7,51 @@ import { RichText } from '@graphcms/rich-text-react-renderer';
 const PostDetail = ( { post }) => {
   const content = post.content.raw;
 
-  const getContentFragment = (index, text, obj, type) => {
-    let modifiedText = text;
 
-    if (obj) {
-      if (obj.bold) {
-        modifiedText = (<b key={index}>{text}</b>);
-      }
 
-      if (obj.italic) {
-        modifiedText = (<em key={index}>{text}</em>);
-      }
 
-      if (obj.underline) {
-        modifiedText = (<u key={index}>{text}</u>);
-      }
-    }
+
+
+  // const getContentFragment = (index, text, obj, type) => {
+  //   let modifiedText = text;
+
+  //   if (obj) {
+  //     if (obj.bold) {
+  //       modifiedText = (<b key={index}>{text}</b>);
+  //     }
+
+  //     if (obj.italic) {
+  //       modifiedText = (<em key={index}>{text}</em>);
+  //     }
+
+  //     if (obj.underline) {
+  //       modifiedText = (<u key={index}>{text}</u>);
+  //     }
+  //   }
     
 
-    switch (type) {
-      case 'heading-three':
-        return <h3 key={index} className="text-xl text-white font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
-      case 'paragraph':
-        return <p key={index} className="mb-8 text-white">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
-      case 'heading-four':
-        return <h4 key={index} className="text-md font-semibold mb-4 text-white">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
-      case 'image':
-        return (
-          <Image 
-            key={index}
-            alt={obj.title}
-            height={obj.height}
-            width={obj.width}
-            src={obj.src}
-          />
+  //   switch (type) {
+  //     case 'heading-three':
+  //       return <h3 key={index} className="text-xl text-white font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+  //     case 'paragraph':
+  //       return <p key={index} className="mb-8 text-white">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+  //     case 'heading-four':
+  //       return <h4 key={index} className="text-md font-semibold mb-4 text-white">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+  //     case 'image':
+  //       return (
+  //         <Image 
+  //           key={index}
+  //           alt={obj.title}
+  //           height={obj.height}
+  //           width={obj.width}
+  //           src={obj.src}
+  //         />
 
-        );
-      default:
-        return modifiedText;
-    }
-  };
+  //       );
+  //     default:
+  //       return modifiedText;
+  //   }
+  // };
 
   return (
     <div className=' text-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8'>
@@ -102,18 +107,28 @@ const PostDetail = ( { post }) => {
         })} */}
         <RichText 
           content={content} 
+
+
           renderers={{
-          h1: ({ children }) => <h1 className="">{children}</h1>,
-          h2: ({ children }) => <h2 className="">{children}</h2>,
+          h1: ({ children }) => <h1 className=" ">{children}</h1>,
+          h2: ({ children }) => <h2 className=" ">{children}</h2>,
+          h5: ({ children }) => <h5 className=" text-2xl">{children}</h5>,
           h3: ({ children }) => <h3 className="">{children}</h3>,
           h4: ({ children }) => <h4 className="">{children}</h4>,
-          p: ({ children }) => <p className="">{children}</p>,
+          p: ({ children }) => <p className=" mb-2">{children}</p>,
           bold: ({ children }) => <strong className="text-base">{children}</strong>,
           table: ({ children }) => <table className=' w-full'>{children}</table>,
           // table_row: ({ children }) => <tr className=' border-t-bubble-gum'>{children}</tr>,
           // table_head: ({ children }) => <th className=' border-b-2' >{children}</th>,
-          table_cell: ({ children }) => <td className=' border px-1 py-2 border-b-brightRedLight   '>{children}</td>
-        }}
+          table_cell: ({ children }) => <td className=' border px-1 py-2 border-b-brightRedLight   '>{children}</td>,
+
+          iframe: ({ url, width, height}) => <iframe src={url} className="w-full h-72" ></iframe>,
+          ul: ({ children }) => <ul class="list-disc list-inside my-4 text-lg">{children}</ul>,
+          ol: ({ children }) => <ol class="list-decimal list-inside my-4 text-lg">{children}</ol>,
+          li: ({ children }) => <li class="my-2 text-lg">{children}</li>,
+          code: ({ children }) => <code class="bg-gray-100 dark:bg-gray-800 rounded-md p-2 text-sm ">{children}</code>,
+          code_block: ({ children }) => <pre class="bg-gray-100 dark:bg-gray-800 overflow-y-scroll rounded-md p-2 text-sm ">{children}</pre>,
+          }}
         />
 
 
