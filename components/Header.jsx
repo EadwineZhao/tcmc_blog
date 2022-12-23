@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { getCategories } from "../services";
 import Image from 'next/image';
 import logo from '../public/logo.png'
-import { group, church, children, family } from '../public/icon';
+import { group, church, children, family, calendar } from '../public/icon';
 
 
 
@@ -39,8 +39,8 @@ const Header = (props) => {
   return (
     <nav className=' sticky top-0 shadow-md left-0 w-full bg-white text-lg text-color-text-primary z-50'>
     {/* <nav className=' fixed top-0 left-0 w-full  bg-color-navbar text-white z-40     flex  py-6 justify-between items-center navbar'> */}
-        <div className='container m-auto px-6 w-auto lg:max-w-7xl '>
-            <div className='flex justify-between items-center py-2'>
+        <div className='container m-auto px-6 w-auto lg:max-w-[1248px] '>
+            <div className='flex justify-between items-center w-auto py-2'>
                 <div className='h-auto w-auto'>
                     <Link href='/' >
                         <>
@@ -121,10 +121,10 @@ const Header = (props) => {
                                                 </div>
                                                 <div className=' hover:text-color-hover'>
                                                     <div className=' font-semibold mb-1'>
-                                                        教会活动
+                                                        教会生活
                                                     </div>
                                                     <div className=' font-normal text-sm'>
-                                                        教会日志，以往活动信息，记录精彩时刻
+                                                        教会生活记录，以往精彩时刻
                                                     </div>
                                                 </div>
                                             </Link>
@@ -146,21 +146,40 @@ const Header = (props) => {
                                                     </div>
                                                 </div>
                                             </Link>
+                                            <Link className='flex items-center gap-3 pr-[1rem] pl-[2rem] mb-[1rem]' href="/fellowship" onClick={handleClickMenu} >
+                                                <div className='flex items-center bg-color-bg-icon w-10 h-10 rounded-md'>
+                                                    <Image 
+                                                        alt='calendar-icon'
+                                                        src={calendar}
+                                                        height={22}
+                                                        width={22}
+                                                    />
+                                                </div>
+                                                <div className=' hover:text-color-hover'>
+                                                    <div className=' font-semibold mb-1'>
+                                                        教会日历
+                                                    </div>
+                                                    <div className=' font-normal text-sm'>
+                                                        教会即将到来的活动信息，以及以往活动
+                                                    </div>
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div className='hover:text-color-hover text-base font-semibold leading-6'>
                             <Link href="/offerings">
                                 奉献
                             </Link>
                         </div>
-                        <div>
+
+                        {/* <div>
                             <Link href="/contactus">
                                 联系我们
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
@@ -168,7 +187,7 @@ const Header = (props) => {
                 <div className='hidden lg:flex justify-between max-w-[200px] items-center'>
                     <Link 
                         className='text-sm m-1 font-semibold tracking-wider text-white h-10 w-auto px-8 py-4 rounded-md bg-color-hover lg:inline-flex items-center' 
-                        href='/'>
+                        href='/contactus'>
                         联系我们
                     </Link>
                 </div>

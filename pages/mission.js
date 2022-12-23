@@ -2,7 +2,7 @@ import React from 'react'
 
 const Mission = () => {
   return (
-    <div className='container  mx-auto'>
+    <div className='container  m-auto w-auto lg:max-w-[1200px]'>
       {/* <div className='flex flex-col justify-center text-center m-6 space-y-6 text-color-text'>
 
           <p>
@@ -17,7 +17,7 @@ const Mission = () => {
           </p>
       </div> */}
 
-      <div className='container bg-color-footer mx-auto px-4 pt-10 pb-20 grid  grid-cols-1 gap-12  lg:grid-cols-12 '>
+      <div className=' bg-color-footer mx-auto px-4 pt-10 pb-20 grid  grid-cols-1 gap-12  lg:grid-cols-12 '>
           {/* <div className=' col-span-1 text-center p-12 row-span-4 lg:col-span-6 '>
               <h1 className=' text-2xl font-extrabold gradient__text mb-6'>佳恩堂目标、使命</h1>
               <h3 className=' text-l font-bold text-white'>做门徒，关怀，宣教</h3>

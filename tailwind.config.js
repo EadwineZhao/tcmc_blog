@@ -50,7 +50,12 @@ module.exports = {
       'test':'rgba(248, 247, 216, 0.7)',
       'color-pink':'rgb(236 72 153)',
       'color-shadow':'rgba(0, 0, 0, 0.024)',
-
+      'color-blog-title':'rgb(8, 35, 51)',
+      'color-blog-datetime':'rgb(143, 166, 178)',
+      'color-blog-text':'rgb(113, 128, 150)',
+      'color-blog-text-2':'rgb(12, 52, 75)',
+      'color-blog-subheadline': 'rgb(226, 232, 240)',
+      'color-blog-tag':'rgb(237, 242, 247)',
     },
   },
   plugins: [],

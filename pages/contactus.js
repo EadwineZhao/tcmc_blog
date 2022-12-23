@@ -1,7 +1,7 @@
 
 const ContactUs = () => {
   return (
-    <div className='container  bg-color-footer mx-auto px-12 py-12'>
+    <div className='container  bg-color-footer mx-auto  px-6 py-12 lg:max-w-7xl'>
         <div className=" text-white space-y-6 mb-8">
         <p>
         我们渴望每天追求上帝的同在，活出基督耶稣的样式，为主做见证，在这个时代中履行大使命。

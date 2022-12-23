@@ -14,8 +14,8 @@ const About = () => {
 
     return (
         
-        <div className=" container mb-8  rounded-lg    px-5 mx-auto mt-10 text-center text-color-text">
-            <div className='container   mx-auto px-6'>
+        <div className=" container mb-8 rounded-lg mx-auto mt-10  text-color-text lg:max-w-[1200px]">
+            <div className=' flex flex-col justify-center items-center  mx-auto '>
 
                 <h3 className=' text-xl font-bold py-2'>
                 使徒信经
@@ -66,8 +66,8 @@ const About = () => {
                 佳恩堂牧者与执事会
             </h2>
                 {/* // <!-- Testimonials Container --> */}
-                <div className="container mx-auto px-8 mb-8 grid grid-cols-1 lg:grid-cols-12 gap-10 ">
-                
+            <div className="container mx-auto  mb-8 grid grid-cols-1 lg:grid-cols-12 gap-10 ">
+            
                 {/* {console.log(leaders)} */}
                 {leaders.map((leader) => {
                     return (
@@ -106,9 +106,7 @@ const About = () => {
                     </div>
                     )
                 })}
-     
-
-                </div>
+            </div>
         </div>
     )
 }

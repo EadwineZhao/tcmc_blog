@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className='border-y border-color-border'>
       {/* <!-- Flex Container --> */}
       <div
-        className="container flex  flex-col-reverse justify-between px-3 py-10  space-y-8 md:flex-row md:space-y-0"
+        className="container mx-auto flex  flex-col-reverse justify-between py-10  space-y-8 md:flex-row md:space-y-0 lg:max-w-[1200px]"
       >
         {/* <!-- Logo and social links container --> */}
         <div
