@@ -12,19 +12,21 @@ const Groups = () => {
     .then(data => setGroups(data))
   }, [])
 
-  console.log(groups);
   return (
+    
     <div className="container mx-auto my-16 lg:max-w-[1200px]">
       <div className="flex flex-col mt-[6rem] items-center justify-around px-[1rem] pb-[5rem]">
-        <h1 className=" font-bold text-white text-[4.5rem]">
+        <h1 className=" font-bold text-white text-center text-[4.5rem]">
           佳恩堂小组
         </h1>
-        <p className=" text-[1.25rem] text-color-blog-subheadline leading-6 font max-w-[567px]">
+        <p className="text-center text-[1.25rem] text-color-blog-subheadline leading-6 font max-w-[567px]">
           邮件订阅，佳恩堂定期周刊，更新最新教会信息，教会活动
         </p>
         <section className=" py-6 text-center">
           <div className=" mx-auto max-w-[1200px]">
             <form className=" min-w-[500px] flex flex-col gap-4 lg:flex-row justify-between items-center">
+
+              {/* label wrapper*/}
               <div className="flex flex-col gap-4 lg:flex-row">
                 <label className=" bg-white rounded-[10px] flex gap-4 h-12 py-[14px] items-center pr-[14px] pl-[26px]">
                   <div className="w-[18px] h-[18px]">
@@ -51,8 +53,14 @@ const Groups = () => {
 
                   <input id="email" type='text' name="EMAIL" placeholder="邮件地址" />
                 </label>
-
               </div>
+              {/* button wrapper */}
+              <Link 
+                href='/groups'
+                className="flex justify-center items-center py-[14px] px-[28px] bg-color-btn hover:bg-color-btn-hover text-white rounded-md font-bold  h-[48px] "
+              >
+                <p>点击订阅</p>
+              </Link>
             </form>
           </div>
         </section>
@@ -61,7 +69,7 @@ const Groups = () => {
         <Link href='#' className=" flex flex-col lg:flex-row ">
           <div className="relative flex-1 min-h-[321px] lg:w-1/2">
             <Image 
-              alt="aaa"
+              alt="group-title-image"
               src='https://media.graphassets.com/XAffAVqlQtaA2qhznOPx'
               fill
               className=" object-cover object-center"
@@ -75,12 +83,14 @@ const Groups = () => {
             <h2 className="font-bold text-color-blog-title text-[28px] mb-2">
               小组重中之重重中之重
             </h2>
-            <p className=" text-color-blog-text">以小组形态，彰显耶稣的生命。 结构：形成小组关系网，帮助各人成长及建立相亲相爱的关系；小组隶属教会，表现合一性
+            <p className=" text-color-blog-text ">以小组形态，彰显耶稣的生命。 结构：形成小组关系网，帮助各人成长及建立相亲相爱的关系；小组隶属教会，表现合一性
             小组是每间健康教会不可或缺的，因为透过小组，我们才能经历教会生活的六个目标——就是敬拜、传福音、门徒训练、事奉、祷告和团契
             </p>
           </div>
         </Link>
       </div>
+
+      
       <div className=" mx-auto flex flex-col flex-wrap justify-between lg:flex-row ">
         {groups.map(group => {
           return(

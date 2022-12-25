@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+
 module.exports = {
   content: [
     './pages/**/*.{html,js,jsx}',
@@ -19,11 +21,15 @@ module.exports = {
     },
     colors: {
       transparent: 'transparent',
+      'hoverOnTransparent': 'rgb(var(--color-hoverOnTransparent))',
       current: 'currentColor',
-      'color-btn': '#FFD2A4',
-      'color-hover':'rgb(90, 103, 216)',
+      'color-btn': 'rgb(76, 81, 190)',
+      'color-btn':'rgb(90, 103, 216)',
+      'color-btn-hover': 'rgb(76 81 190)',
       'color-text-primary': 'rgb(45, 55, 72)',
       'color-text-secondary': 'rgb(113, 128, 150)',
+      'color-text-hover':'rgb(89 104 216)',
+      'color-text-hover-w':'rgb(163 191 250)',
       'color-navbar':'rgb(26, 32, 44)',
       'color-text-btn':'rgb(74, 85, 104)',
       'color-border': 'rgb(226, 232, 240)',
@@ -56,6 +62,7 @@ module.exports = {
       'color-blog-text-2':'rgb(12, 52, 75)',
       'color-blog-subheadline': 'rgb(226, 232, 240)',
       'color-blog-tag':'rgb(237, 242, 247)',
+      'color-events-bg':'rgb(94, 91, 254)',
     },
   },
   plugins: [],
