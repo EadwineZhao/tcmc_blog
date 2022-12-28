@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <footer className='border-y border-color-border'>
+    <footer className='border-y overflow-hidden border-color-border'>
       {/* <!-- Flex Container --> */}
       <div
         className="container mx-auto flex  flex-col-reverse justify-between py-10  space-y-8 md:flex-row md:space-y-0 lg:max-w-[1200px]"

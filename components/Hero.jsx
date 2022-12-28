@@ -63,7 +63,6 @@ const Hero = ({ featuredPosts }) => {
 
 
                 {featuredPosts.map(({node: post}, index) => {
-                    console.log(index, post.featuredImage.url)
                     return (
                         <div key={post.slug} className='  relative  w-full  h-96 lg:h-[600px] '>
                             <Link  href={`/post/${post.slug}`} key={post.title}>

@@ -14,7 +14,10 @@ const Groups = () => {
 
   return (
     
-    <div className="container mx-auto my-16 lg:max-w-[1200px]">
+    <div className=" overflow-hidden  ">
+
+
+    <div className="my-16  mx-auto px-[1rem] lg:max-w-[1200px]">
       <div className="flex flex-col mt-[6rem] items-center justify-around px-[1rem] pb-[5rem]">
         <h1 className=" font-bold text-white text-center text-[4.5rem]">
           佳恩堂小组
@@ -22,45 +25,34 @@ const Groups = () => {
         <p className="text-center text-[1.25rem] text-color-blog-subheadline leading-6 font max-w-[567px]">
           邮件订阅，佳恩堂定期周刊，更新最新教会信息，教会活动
         </p>
-        <section className=" py-6 text-center">
-          <div className=" mx-auto max-w-[1200px]">
-            <form className=" min-w-[500px] flex flex-col gap-4 lg:flex-row justify-between items-center">
+        <section className=" mx-auto py-10 text-left">
+          <div className=" max-w-[500px] px-2 lg:px-8  lg:max-w-[1200px]">
+            <form className=" min-w-full flex flex-col gap-4 lg:flex-row justify-between items-start lg:items-center">
 
               {/* label wrapper*/}
-              <div className="flex flex-col gap-4 lg:flex-row">
-                <label className=" bg-white rounded-[10px] flex gap-4 h-12 py-[14px] items-center pr-[14px] pl-[26px]">
+              <div className="flex w-full max-w-full flex-col gap-4 lg:flex-row">
+                <label className=" max-w-full bg-white rounded-[10px]  flex  gap-4 h-12 py-[14px]  items-center pr-[14px] pl-[26px]">
                   <div className="w-[18px] h-[18px]">
-                    <Image 
-                      alt="person"
-                      src={person}
-                      width={18}
-                      height={18}
-                    />
+                    <svg fill="none" stroke="currentColor" strokeWidth="1" width="100%" height="100%" strokeLinecap="round" strokeLinejoin="round"><use xlinkHref="/assets/feathericons.svg#user"></use></svg>                      
                   </div>
                   {/* value=""*/}
-                  <input id="fname" type='text' name="FNAME" placeholder="名字"  />
-                </label>
-                <label className=" bg-white rounded-[10px] flex gap-4 h-12 py-[14px] items-center pr-[14px] pl-[26px]">
-                  <div className="w-[18px] h-[18px]">
-                    <Image 
-                      alt="email"
-                      src={email}
-                      width={18}
-                      height={18}
-                    />
-                  </div>
-                                    {/* value=""*/}
+                  <input id="fname" type='text' name="FNAME" placeholder="名字" className="w-full" />
 
-                  <input id="email" type='text' name="EMAIL" placeholder="邮件地址" />
+                </label>
+                <label className="max-w-full bg-white rounded-[10px] flex gap-4 h-12 py-[14px] items-center pr-[14px] pl-[26px]">
+                  <div className="w-[18px] h-[18px]">
+                    <svg fill="none" stroke="currentColor" strokeWidth="1" width="100%" height="100%" strokeLinecap="round" strokeLinejoin="round"><use xlinkHref="/assets/feathericons.svg#user"></use></svg>                      
+                  </div>
+                  <input id="email" type='text' name="EMAIL" placeholder="邮件地址" className="w-full" />
                 </label>
               </div>
               {/* button wrapper */}
               <Link 
-                href='/groups'
-                className="flex justify-center items-center py-[14px] px-[28px] bg-color-btn hover:bg-color-btn-hover text-white rounded-md font-bold  h-[48px] "
-              >
-                <p>点击订阅</p>
-              </Link>
+                    className='Newsletter__Button rounded-md flex justify-center items-center text-center py-[14px]  px-[28px] bg-color-btn-bg h-12 font-bold text-white hover:bg-color-btn-hover '
+                    href="#"
+                  >
+                    <input type='submit' value='点击订阅' name='subscribe' id='subscribe' />
+                  </Link>
             </form>
           </div>
         </section>
@@ -83,7 +75,7 @@ const Groups = () => {
             <h2 className="font-bold text-color-blog-title text-[28px] mb-2">
               小组重中之重重中之重
             </h2>
-            <p className=" text-color-blog-text ">以小组形态，彰显耶稣的生命。 结构：形成小组关系网，帮助各人成长及建立相亲相爱的关系；小组隶属教会，表现合一性
+            <p className=" text-color-text-lightgray ">以小组形态，彰显耶稣的生命。 结构：形成小组关系网，帮助各人成长及建立相亲相爱的关系；小组隶属教会，表现合一性
             小组是每间健康教会不可或缺的，因为透过小组，我们才能经历教会生活的六个目标——就是敬拜、传福音、门徒训练、事奉、祷告和团契
             </p>
           </div>
@@ -112,10 +104,10 @@ const Groups = () => {
                     <h3 className="font-bold text-color-blog-title text-xl mb-2">
                       小组名称：{group.name}
                     </h3>
-                    <p className=" text-color-blog-datetime">
+                    <p className=" text-color-text-datetime">
                       聚会时间：{group.startAt}
                     </p>
-                    <p className=" text-color-blog-text-2">
+                    <p className=" text-color-text-lightblack">
                       组长：
                       {group.authors.map(author => {
                         return(
@@ -123,16 +115,15 @@ const Groups = () => {
                         )
                       })}
                     </p>
-                    <p className=" text-color-blog-text-2">
+                    <p className=" text-color-text-lightblack">
                       小组目标：{group.destination}
                     </p>
                     <div className="flex mt-[2rem] ">
-                        <Link 
-                          href="/groups"
+                        <span 
                           className=" bg-color-blog-tag py-1 px-2 text-sm text-color-text-btn rounded "
                         >
                           团契，聚餐
-                        </Link>
+                        </span>
                     </div>
                   </div>
                 </Link>
@@ -141,6 +132,7 @@ const Groups = () => {
         })}
       </div>
     
+    </div>
     </div>
   )
 }

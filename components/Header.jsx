@@ -11,25 +11,73 @@ import { useRouter } from 'next/router';
 
 
 const Header = (props) => {
-  const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState([]);
 
 
-  const router = useRouter();
+    const router = useRouter();
 //   console.log(router.pathname)
 
-  useEffect(() => {
+    useEffect(() => {
 
 
-    const r = document.querySelector(':root');
-    r.style.setProperty('--color-hoverOnTransparent', '89 104 216')
+        // const r = document.querySelector(':root');
+        // const navbar = document.querySelector('#navbar');
+        // function handleScroll() {
+        //     if(window.scrollY >= 64) {
 
-    getCategories()
-      .then((newCategories) => setCategories(newCategories))
-  }, []);
+        //         navbar.style.backgroundColor = 'white'
+        //         navbar.style.color = 'rgb(45 55 72)'               
+        //         r.style.setProperty('--color-hoverOnTransparent', '89 104 216')
+        //         console.log(r.style)
+        //         document.onbeforeunload = document.removeEventListener('scroll', handleScroll, true)
+                
+                
+        //     } else {
+        //         console.log('on scroll else')
+        //         navbar.style.boxShadow = 'none'
+        //         navbar.style.backgroundColor = 'transparent'
+        //         navbar.style.color = 'white'
+        //         r.style.setProperty('--color-hoverOnTransparent', '163 191 250')
+
+        //     } 
+        // }
+
+        
+        // if(router.pathname === '/events') {
+
+        //     console.log('event path')
+                  
+        //     navbar.style.boxShadow = 'none'
+        //     navbar.style.backgroundColor = 'transparent'
+        //     navbar.style.color = 'white'
+        //     r.style.setProperty('--color-hoverOnTransparent', '163 191 250')
+
+        //     // arrayTransparentHover.map(element => {
+        //     //     element.style.setProperty('--color-hoverOnTransparent', '163 191 250')
+        //     // })
+            
+
+        //     document.addEventListener('scroll', handleScroll, true)
+            
+        // } else {
+        //     console.log(router.pathname)
+        //     console.log('not event path')
+
+        //     navbar.style.backgroundColor = 'white';
+        //     navbar.style.color = 'rgb(45 55 72)';
+        //     // r.style.setProperty('--color-hoverOnTransparent', '89 104 216')
+        //     r.style.setProperty('--color-hoverOnTransparent', '89 104 216')
+            
+        // }
+
+
+
+        getCategories()
+        .then((newCategories) => setCategories(newCategories))
+    }, );
 
 
   const showChurchActivities = (e) => {
-    console.log(e.onMouseEnter)
 
     
     const metaMenu = document.querySelector('#activities')
@@ -46,6 +94,7 @@ const Header = (props) => {
     const metaMenu =  document.querySelector('#metamenu')
     metaMenu.style.display = 'none'
    }
+
    const handleClickMenu = () => {
     const metaMenu = document.querySelector('#activities');
     metaMenu.style.display = 'none';
@@ -76,12 +125,12 @@ const Header = (props) => {
 
                 <div className='hidden  lg:flex items-center justify-end gap-x-6'>
                     <div className='inline-flex flex-1 items-center justify-start gap-6'>
-                        <div className='hover:text-hoverOnTransparent  transparent-bg-hover text-base font-semibold leading-6'>
+                        <div className='hover:text-hoverOnTransparent   text-base font-semibold leading-6'>
                             <Link className=' py-3 px-4' href="/about">
                                 关于我们
                             </Link>
                         </div>
-                        <div className='hover:text-hoverOnTransparent transparent-bg-hover text-base font-semibold leading-6'>
+                        <div className='hover:text-hoverOnTransparent  text-base font-semibold leading-6'>
                             <Link href="/mission" className=' py-3 px-4'>
                                 使命及目标
                             </Link>
@@ -91,12 +140,12 @@ const Header = (props) => {
                             onMouseEnter={showChurchActivities}
                             onMouseLeave={handleClickMenu}
                         >
-                            <Link className=' relative py-3  px-4 hover:text-hoverOnTransparent transparent-bg-hover  flex justify-between items-center' href='#' scroll={false}>
+                            <Link className=' relative py-3  px-4 hover:text-hoverOnTransparent   flex justify-between items-center' href='#' scroll={false}>
                                 教会信息
                                 <svg className=" hover:bg-hoverOnTransparent" id='chevron-down' name="chevron-down" lens-role="icon" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><use xlinkHref="/arrow-down.svg#chevron-down">
-            
-            <symbol id="chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></symbol>
-            </use></svg>
+                                    <symbol id="chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></symbol>
+                                    </use>
+                                </svg>
                                 {/* <Image 
                                     src='/arrow-down.svg'
                                     id='activities-arrow'
@@ -123,7 +172,7 @@ const Header = (props) => {
                                                         width={22}
                                                     />
                                                 </div>
-                                                <div className=' hover:text-color-text-hover'>
+                                                <div className=' text-color-text-primary hover:text-color-text-hover'>
                                                     <div className=' font-semibold mb-1'>
                                                         小组介绍
                                                     </div>
@@ -141,7 +190,7 @@ const Header = (props) => {
                                                         width={22}
                                                     />
                                                 </div>
-                                                <div className=' hover:text-color-text-hover'>
+                                                <div className=' text-color-text-primary hover:text-color-text-hover'>
                                                     <div className=' font-semibold mb-1'>
                                                         教会生活
                                                     </div>
@@ -159,7 +208,7 @@ const Header = (props) => {
                                                         width={22}
                                                     />
                                                 </div>
-                                                <div className=' hover:text-color-text-hover'>
+                                                <div className=' text-color-text-primary hover:text-color-text-hover'>
                                                     <div className=' font-semibold mb-1'>
                                                         儿童团契
                                                     </div>
@@ -177,7 +226,7 @@ const Header = (props) => {
                                                         width={22}
                                                     />
                                                 </div>
-                                                <div className=' hover:text-color-text-hover'>
+                                                <div className=' text-color-text-primary hover:text-color-text-hover'>
                                                     <div className=' font-semibold mb-1'>
                                                         教会日历
                                                     </div>
@@ -191,12 +240,12 @@ const Header = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div className='hover:text-hoverOnTransparent transparent-bg-hover text-base font-semibold leading-6'>
+                        <div className='hover:text-hoverOnTransparent  text-base font-semibold leading-6'>
                             <Link href="/resources" className=' py-3 px-4'>
                                 教会资料
                             </Link>
                         </div>
-                        <div className='hover:text-hoverOnTransparent transparent-bg-hover text-base font-semibold leading-6'>
+                        <div className='hover:text-hoverOnTransparent  text-base font-semibold leading-6'>
                             <Link href="/offerings" className=' py-3 px-4'>
                                 奉献
                             </Link>
