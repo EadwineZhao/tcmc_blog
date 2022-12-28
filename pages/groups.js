@@ -25,7 +25,7 @@ const Groups = () => {
         <p className="text-center text-[1.25rem] text-color-blog-subheadline leading-6 font max-w-[567px]">
           邮件订阅，佳恩堂定期周刊，更新最新教会信息，教会活动
         </p>
-        <section className=" mx-auto py-10 text-left">
+        <section className=" w-full mx-auto py-10 text-left">
           <div className=" max-w-[500px] px-2 lg:px-8  lg:max-w-[1200px]">
             <form className=" min-w-full flex flex-col gap-4 lg:flex-row justify-between items-start lg:items-center">
 

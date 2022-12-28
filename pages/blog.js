@@ -17,7 +17,7 @@ const Blog = ({ posts }) => {
             关于佳恩堂的信息指南，官方文章，以及教堂日常活动记录关于佳恩堂的信息指南，官方文章，以及教堂日常活动记录
           </p>
 
-          <section className='Subscribe_Wrapper mx-auto text-left py-10  lg:my-6'>
+          <section className='Subscribe_Wrapper mx-auto  w-full text-left py-10  lg:my-6'>
             <div className='Container mx-auto my-0  max-w-[500px] px-2 lg:px-8 lg:max-w-[1200px]'>
                 <form className='Newsletter__NewsletterWrapper  min-w-full  gap-[16px] flex flex-col justify-between items-start   lg:flex-row mt-6'>
                   <div className='label-wrapper flex flex-col gap-4 w-full max-w-full lg:flex-row'>
