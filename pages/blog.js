@@ -7,9 +7,8 @@ import Image from 'next/image'
 
 
 const Blog = ({ posts }) => {
-    console.log(posts)
     return (
-      <div className='bg-white'>
+      <div className=''>
         <div className='overflow-hidden bg-blog  bg-center-50px  bg-cover bg-no-repeat'>
           <div className='flex flex-col  justify-center items-center mt-[6rem] pb-[5rem] px-[1rem]'>
             <h1  className='mt-[1rem]  font-bold   text-color-text-graywhite text-center'>
@@ -70,6 +69,10 @@ const Blog = ({ posts }) => {
                     src='https://media.graphassets.com/XAffAVqlQtaA2qhznOPx'
                     fill
                     className=' object-cover w-full h-full object-center'
+                    sizes="
+                      (max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw"
                   />
                 </div>
                 <div className='HeroPost__Texts flex-1 p-6 flex flex-col justify-between'>
@@ -86,6 +89,7 @@ const Blog = ({ posts }) => {
                       欢迎弟兄姊妹一起来敬拜这位昔在今在永在的主；也欢迎新朋友或外地到访的弟兄姊妹，盼望你能成为我们这个属灵大家庭的一份子。
                      </span>
                     </div>
+                  </div>
                     
                     <div className='Tags_TagWrapper flex mt-8'>
                       <div
@@ -94,7 +98,6 @@ const Blog = ({ posts }) => {
                       教育
                       </div>
                     </div>
-                  </div>
                 </div>
               </Link>
             </article>
