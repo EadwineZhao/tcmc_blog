@@ -7,12 +7,12 @@ import Image from 'next/image'
 
 
 const Blog = ({ posts }) => {
-
+    console.log(posts)
     return (
-      <div>
+      <div className='bg-white'>
         <div className='overflow-hidden bg-blog  bg-center-50px  bg-cover bg-no-repeat'>
           <div className='flex flex-col  justify-center items-center mt-[6rem] pb-[5rem] px-[1rem]'>
-            <h1  className='mt-[1rem] font-bold text-[4.5rem] text-color-text-graywhite text-center'>
+            <h1  className='mt-[1rem]  font-bold   text-color-text-graywhite text-center'>
               佳恩堂Blog
             </h1>
             <p className=' mt-3 text-[1.25rem] text-center text-color-text-graywhite max-w-[576px] leading-6'>
@@ -59,11 +59,11 @@ const Blog = ({ posts }) => {
           </div>
         </div>
 
-        {/* Container Moust recent Post */}
-        <div className='max-w-[500px] px-4 mx-auto lg:max-w-[1200px]'>
+        {/* Container Most recent Post */}
+        <div className='Container max-w-[500px] px-4 mx-auto mt-8 lg:mt-0 lg:max-w-[1200px] lg:px-0'>
           <div className='HeroPostSection__Wrapper'>
             <article>
-              <Link href="#" className='relative bg-white flex -mt-16 z-30 rounded-lg overflow-hidden shadow-xl'>
+              <Link href="#" className='relative bg-white flex flex-col lg:flex-row lg:-mt-16 z-30 rounded-lg overflow-hidden shadow-xl'>
                 <div className='HeroPost__Image relative  min-h-[321px] w-full  flex-1 '>
                   <Image 
                     alt='tt'
@@ -74,31 +74,57 @@ const Blog = ({ posts }) => {
                 </div>
                 <div className='HeroPost__Texts flex-1 p-6 flex flex-col justify-between'>
                   <div>
-                    <h2 className=' font-bold text-[28px] mb-6 text-color-text-blog-title'>
-                    Copyright © 2022 纽西兰华人卫理公会佳恩堂Copyright
-                    </h2>
+                    <h4 className=' font-bold  mb-6 text-color-text-blog-title'>
+                      纽西兰华人卫理公会佳恩堂纽西兰华人卫理公会佳恩堂
+                    </h4>
                     <p className=' text-color-text-datetime my-4'>
                       Edwin Zhao, December 22, 2022
                     </p>
 
                     <div className='HeroPost__Except'>
-                      <span className=' text-xl text-color-text-lightgray'>
+                      <span className='  text-color-text-lightgray'>
                       欢迎弟兄姊妹一起来敬拜这位昔在今在永在的主；也欢迎新朋友或外地到访的弟兄姊妹，盼望你能成为我们这个属灵大家庭的一份子。
                      </span>
                     </div>
                     
                     <div className='Tags_TagWrapper flex mt-8'>
-                      {/* <Link 
-                        href='#'
+                      <div
                         className=' bg-color-text-blog-tag py-1 px-2 rounded text-sm mr-2'
                       >
                       教育
-                      </Link> */}
+                      </div>
                     </div>
                   </div>
                 </div>
               </Link>
             </article>
+          </div>
+        </div>
+
+        {/* Container for Posts */}
+        <div className=' mx-auto px-8 max-w-[500px] lg:max-w-[1200px] lg:px-0'>
+          <div className=' overflow-hidden'>
+
+            <div className=' mt-8 grid grid-cols-1 gap-6 lg:grid-cols-12'>
+              {posts.map((post) => {
+                return(
+                  <div key={post.id} className=' overflow-hidden col-span-1 bg-white max-w-sm rounded-lg shadow-xl lg:col-span-4'>
+                    <PostCard 
+                      post={post}
+                    />
+                  </div>
+                )
+              })}                
+            </div>
+
+
+            <div className=' mx-auto   my-12 w-full text-center'>
+              <button 
+                className=' mx-auto flex justify-center items-center  border border-color-btn-bg-load px-6 py-3 m-1 w-max bg-color-btn-bg-load  rounded-md text-white text-lg font-medium p-0'
+              >
+                查看更多
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -108,12 +134,20 @@ const Blog = ({ posts }) => {
 export default Blog
 
 export async function getStaticProps({ params }) {
-    const posts = (await getPosts()) || [];
-    return {
-      props: { posts },
-      revalidate: 20,
-    }
+  const posts = (await getPosts()) || [];
+  return {
+    props: { posts },
+    revalidate: 20,
   }
+}
+
+// export async function getStaticProps({ params }) {
+//     const posts = (await getPosts()) || [];
+//     return {
+//       props: { posts },
+//       revalidate: 20,
+//     }
+//   }
   
   
 //   <div className=' container mx-auto grid grid-cols-1 gap-9 lg:grid-cols-12 lg:max-w-[1200px]'>

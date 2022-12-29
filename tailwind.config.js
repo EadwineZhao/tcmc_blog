@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
 
 
 module.exports = {
@@ -44,6 +45,7 @@ module.exports = {
       'color-text-darkblack':'rgb(26, 32, 44)',
       'color-text-blog-title':'rgb(8, 35, 51)',
       'color-text-blog-tag':'rgb(237, 242, 247)',
+      'color-btn-bg-load': 'rgb(22 163 148)',
 //       rgb(160, 174, 192)
 
 
@@ -76,5 +78,15 @@ module.exports = {
       'color-events-bg':'rgb(94, 91, 254)',
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addBase, theme }) {
+      addBase({
+        'h1': { fontSize: theme('fontSize.5xl') },
+        'h2': { fontSize: theme('fontSize.4xl') },
+        'h3': { fontSize: theme('fontSize.3xl') },
+        'h4': { fontSize: theme('fontSize.2xl') },
+        'h5': { fontSize: theme('fontSize.xl') },
+      })
+    })
+  ]
 }
