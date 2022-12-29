@@ -40,9 +40,11 @@ module.exports = {
       'color-border': 'rgb(226, 232, 240)',
       'color-text-lightgray':'rgb(113, 128, 150)',
       'color-text-lightblack':'rgb(12, 52, 75)',
-      'color-text-datetime':'rgb(143, 166, 178)',
+      'color-text-datetime':'rgb(160, 174, 192)',
       'color-text-darkblack':'rgb(26, 32, 44)',
-
+      'color-text-blog-title':'rgb(8, 35, 51)',
+      'color-text-blog-tag':'rgb(237, 242, 247)',
+//       rgb(160, 174, 192)
 
 
       'color-bg-benefitsofjoing': '#F5F2F0',
@@ -68,10 +70,9 @@ module.exports = {
       'test':'rgba(248, 247, 216, 0.7)',
       'color-pink':'rgb(236 72 153)',
       'color-shadow':'rgba(0, 0, 0, 0.024)',
-      'color-blog-title':'rgb(8, 35, 51)',
 
       'color-blog-subheadline': 'rgb(226, 232, 240)',
-      'color-blog-tag':'rgb(237, 242, 247)',
+
       'color-events-bg':'rgb(94, 91, 254)',
     },
   },

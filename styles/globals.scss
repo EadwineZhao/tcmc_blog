@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 @layer base {
   :root {
     --color-primary: 255 115 179;
@@ -116,6 +120,3 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
