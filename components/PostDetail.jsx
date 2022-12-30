@@ -123,11 +123,11 @@ const PostDetail = ( { post }) => {
           table_cell: ({ children }) => <td className=' border px-1 py-2 border-b-brightRedLight   '>{children}</td>,
 
           iframe: ({ url, width, height}) => <iframe src={url} className="w-full h-72" ></iframe>,
-          ul: ({ children }) => <ul class="list-disc list-inside my-4 text-lg">{children}</ul>,
-          ol: ({ children }) => <ol class="list-decimal list-inside my-4 text-lg">{children}</ol>,
-          li: ({ children }) => <li class="my-2 text-lg">{children}</li>,
-          code: ({ children }) => <code class="bg-gray-100 dark:bg-gray-800 rounded-md p-2 text-sm ">{children}</code>,
-          code_block: ({ children }) => <pre class="bg-gray-100 dark:bg-gray-800 overflow-y-scroll rounded-md p-2 text-sm ">{children}</pre>,
+          ul: ({ children }) => <ul className="list-disc list-inside my-4 text-lg">{children}</ul>,
+          ol: ({ children }) => <ol className="list-decimal list-inside my-4 text-lg">{children}</ol>,
+          li: ({ children }) => <li className="my-2 text-lg">{children}</li>,
+          code: ({ children }) => <code className="bg-gray-100 dark:bg-gray-800 rounded-md p-2 text-sm ">{children}</code>,
+          code_block: ({ children }) => <pre className="bg-gray-100 dark:bg-gray-800 overflow-y-scroll rounded-md p-2 text-sm ">{children}</pre>,
           }}
         />
 

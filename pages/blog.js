@@ -140,7 +140,7 @@ export async function getStaticProps({ params }) {
   const posts = (await getPosts()) || [];
   return {
     props: { posts },
-    revalidate: 20,
+    revalidate: 10,
   }
 }
 

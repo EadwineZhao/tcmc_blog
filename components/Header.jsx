@@ -74,7 +74,7 @@ const Header = (props) => {
 
         getCategories()
         .then((newCategories) => setCategories(newCategories))
-    }, );
+    }, []);
 
 
   const showChurchActivities = (e) => {
